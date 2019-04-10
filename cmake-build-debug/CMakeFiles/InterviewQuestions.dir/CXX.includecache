@@ -7,8 +7,14 @@
 #IncludeRegexTransform: 
 
 G:/C++ WorkSpace/InterviewQuestions/main.cpp
+cstdio
+-
+cstdlib
+-
+algorithm
+-
+cstring
+-
 iostream
-G:/C++ WorkSpace/InterviewQuestions/iostream
-stdio.h
-G:/C++ WorkSpace/InterviewQuestions/stdio.h
+-
 

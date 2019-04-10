@@ -1,45 +1,27 @@
-#include "iostream"
-#include "stdio.h"
-#define n 5
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
+#include <cstring>
+#include <iostream>
+#define MAXSIZE 100
+
 using namespace std;
 
-    void QuickSort(int a[],int start,int end)
-    {
-        if(start < end) {
-            int i, j;
-            i = start;
-            j = end;
-            int key = a[i];
-            while (i < j) {
-                while (i < j && a[j] >= key) {
-                    j--;
-                }
-                if (i < j) {
-                    a[i] = a[j];
-                }
-                while (i < j && a[i] < key) {
-                    i++;
-                }
-                if (i < j) {
-                    a[j] = a[i];
-                }
-            }
-                a[i] = key;
-                QuickSort(a, i + 1, end);
-                QuickSort(a, start, j - 1);
-            }
-    }
-int main()
+int main(void)
 {
-    int a[n];
-
-    cout<<"请输入数组各个数据："<<endl;
-    for(int i =0; i < n; i++)
-        cin>>a[i];
-    cout<<"排序的结果是： "<<endl;
-    QuickSort(a,0,n-1);
-
-    for(int i = 0;i < n; i++)
-        cout<<a[i]<<" ";
+    int  n;
+    double p[MAXSIZE];
+    double a[MAXSIZE];
+    while(scanf("%d", &n) != EOF){
+        for(int i = 0; i < n; i++)
+        {
+            cin>>p[i]>>a[i];
+            cout<<p[i]<<" "<<a[i]<<endl;
+        }
+        double  ans = 1;
+        for(int i = 1; i < n; ++i)
+            ans =ans + ( p[i]*a[i]) ;
+        printf("%f\n",ans);
+    }
     return 0;
 }
